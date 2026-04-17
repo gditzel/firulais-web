@@ -15,3 +15,42 @@
     @apply bg-firulais-body-dark text-slate-100;
   }
 }
+
+/* Scroll reveal (appScrollReveal) */
+.scroll-reveal {
+  opacity: 0;
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--sr-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal[data-sr-variant='up'] {
+  transform: translate3d(0, 1.35rem, 0);
+}
+
+.scroll-reveal[data-sr-variant='left'] {
+  transform: translate3d(-1.35rem, 0, 0);
+}
+
+.scroll-reveal[data-sr-variant='right'] {
+  transform: translate3d(1.35rem, 0, 0);
+}
+
+.scroll-reveal[data-sr-variant='zoom'] {
+  transform: scale(0.94);
+}
+
+.scroll-reveal.scroll-reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

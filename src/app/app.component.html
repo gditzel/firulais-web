@@ -94,7 +94,7 @@
       <div
         class="relative mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-2 lg:items-center"
       >
-        <div>
+        <div appScrollReveal>
           <p
             class="mb-3 inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-firulais-primary-dark shadow-soft dark:bg-slate-800/80 dark:text-firulais-pets"
           >
@@ -144,6 +144,9 @@
           </p>
         </div>
         <div
+          appScrollReveal
+          revealVariant="right"
+          [delayMs]="100"
           class="relative flex justify-center lg:justify-end"
           aria-hidden="true"
         >
@@ -202,17 +205,24 @@
     >
       <div class="mx-auto max-w-6xl px-4 sm:px-6">
         <h2
+          appScrollReveal
           class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white"
         >
           Objetivo de la aplicación
         </h2>
-        <p class="mt-3 max-w-2xl text-firulais-muted dark:text-slate-300">
+        <p
+          appScrollReveal
+          [delayMs]="70"
+          class="mt-3 max-w-2xl text-firulais-muted dark:text-slate-300"
+        >
           Firulais concentra la angustia de una pérdida en un flujo claro: crear
           un aviso, compartirlo y dejar que la tecnología ayude a filtrar
           señales útiles entre el ruido.
         </p>
         <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <article
+            appScrollReveal
+            revealVariant="zoom"
             class="rounded-2xl border border-firulais-separator bg-firulais-surface p-6 shadow-soft dark:border-slate-700 dark:bg-firulais-map-popup"
           >
             <div
@@ -230,6 +240,9 @@
             </p>
           </article>
           <article
+            appScrollReveal
+            revealVariant="zoom"
+            [delayMs]="110"
             class="rounded-2xl border border-firulais-separator bg-firulais-surface p-6 shadow-soft dark:border-slate-700 dark:bg-firulais-map-popup"
           >
             <div
@@ -247,6 +260,9 @@
             </p>
           </article>
           <article
+            appScrollReveal
+            revealVariant="zoom"
+            [delayMs]="220"
             class="rounded-2xl border border-firulais-separator bg-firulais-surface p-6 shadow-soft sm:col-span-2 lg:col-span-1 dark:border-slate-700 dark:bg-firulais-map-popup"
           >
             <div
@@ -273,7 +289,7 @@
     >
       <div class="mx-auto max-w-6xl px-4 sm:px-6">
         <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
-          <div>
+          <div appScrollReveal revealVariant="left">
             <h2
               class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white"
             >
@@ -292,6 +308,9 @@
             </p>
           </div>
           <div
+            appScrollReveal
+            revealVariant="right"
+            [delayMs]="80"
             class="rounded-3xl border border-firulais-separator bg-white p-8 shadow-soft dark:border-slate-700 dark:bg-firulais-map-popup"
           >
             <ul class="space-y-4">
@@ -347,17 +366,24 @@
     >
       <div class="mx-auto max-w-6xl px-4 sm:px-6">
         <h2
+          appScrollReveal
           class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white"
         >
           Qué aportamos
         </h2>
-        <p class="mt-3 max-w-2xl text-firulais-muted dark:text-slate-300">
+        <p
+          appScrollReveal
+          [delayMs]="60"
+          class="mt-3 max-w-2xl text-firulais-muted dark:text-slate-300"
+        >
           Firulais no reemplaza el cuidado humano: lo potencia. Esto es lo que
           la app busca aportar a personas, animales y a quienes colaboran en la
           calle.
         </p>
         <div class="mt-10 grid gap-6 md:grid-cols-2">
           <div
+            appScrollReveal
+            revealVariant="zoom"
             class="rounded-2xl bg-gradient-to-br from-firulais-primary to-firulais-primary-dark p-[1px]"
           >
             <div
@@ -383,6 +409,9 @@
             </div>
           </div>
           <div
+            appScrollReveal
+            revealVariant="zoom"
+            [delayMs]="120"
             class="rounded-2xl bg-gradient-to-br from-firulais-primary to-firulais-primary-dark p-[1px]"
           >
             <div
@@ -417,7 +446,7 @@
       data-section="partners"
     >
       <div class="mx-auto max-w-6xl px-4 sm:px-6">
-        <div class="max-w-3xl">
+        <div class="max-w-3xl" appScrollReveal>
           <h2
             class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white"
           >
@@ -436,6 +465,8 @@
           class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
         >
           <div
+            appScrollReveal
+            revealVariant="zoom"
             class="rounded-2xl border border-firulais-separator bg-white p-5 shadow-soft transition hover:border-firulais-primary/40 dark:border-slate-700 dark:bg-firulais-map-popup dark:hover:border-firulais-pets/40"
           >
             <p class="text-2xl" aria-hidden="true">🎓</p>
@@ -449,6 +480,9 @@
             </p>
           </div>
           <div
+            appScrollReveal
+            revealVariant="zoom"
+            [delayMs]="90"
             class="rounded-2xl border border-firulais-separator bg-white p-5 shadow-soft transition hover:border-firulais-primary/40 dark:border-slate-700 dark:bg-firulais-map-popup dark:hover:border-firulais-pets/40"
           >
             <p class="text-2xl" aria-hidden="true">✂️</p>
@@ -461,6 +495,9 @@
             </p>
           </div>
           <div
+            appScrollReveal
+            revealVariant="zoom"
+            [delayMs]="180"
             class="rounded-2xl border border-firulais-separator bg-white p-5 shadow-soft transition hover:border-firulais-primary/40 dark:border-slate-700 dark:bg-firulais-map-popup dark:hover:border-firulais-pets/40"
           >
             <p class="text-2xl" aria-hidden="true">🩺</p>
@@ -473,6 +510,9 @@
             </p>
           </div>
           <div
+            appScrollReveal
+            revealVariant="zoom"
+            [delayMs]="270"
             class="rounded-2xl border border-firulais-separator bg-white p-5 shadow-soft transition hover:border-firulais-primary/40 dark:border-slate-700 dark:bg-firulais-map-popup dark:hover:border-firulais-pets/40"
           >
             <p class="text-2xl" aria-hidden="true">🛒</p>
@@ -487,6 +527,8 @@
         </div>
 
         <div
+          appScrollReveal
+          [delayMs]="100"
           class="mt-12 flex flex-col items-start justify-between gap-6 rounded-3xl bg-gradient-to-r from-firulais-primary to-firulais-primary-dark p-8 text-white sm:flex-row sm:items-center"
         >
           <div>
@@ -515,7 +557,7 @@
     <div
       class="mx-auto flex max-w-6xl flex-col gap-6 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6"
     >
-      <div class="flex items-center gap-2">
+      <div appScrollReveal revealVariant="left" class="flex items-center gap-2">
         <span
           class="flex h-9 w-9 items-center justify-center rounded-lg bg-firulais-splash dark:bg-slate-800"
         >
@@ -536,7 +578,12 @@
           </p>
         </div>
       </div>
-      <p class="max-w-md text-sm text-firulais-muted dark:text-slate-400">
+      <p
+        appScrollReveal
+        revealVariant="right"
+        [delayMs]="80"
+        class="max-w-md text-sm text-firulais-muted dark:text-slate-400"
+      >
         Los colores y textos de esta página siguen la guía visual de la app
         para que sponsors y usuarios reconozcan la misma identidad en web y en
         móvil.
