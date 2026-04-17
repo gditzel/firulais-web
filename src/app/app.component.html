@@ -1,0 +1,545 @@
+<div class="min-h-screen flex flex-col font-sans">
+  <header
+    class="sticky top-0 z-50 border-b border-firulais-separator bg-firulais-bar-light/90 backdrop-blur-md dark:border-slate-700/80 dark:bg-firulais-bar/90"
+  >
+    <div
+      class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6"
+    >
+      <a href="#" class="group flex items-center gap-2">
+        <span
+          class="flex h-10 w-10 items-center justify-center rounded-xl bg-firulais-splash dark:bg-firulais-map-popup"
+          aria-hidden="true"
+        >
+          <svg
+            class="h-6 w-6 text-firulais-pets"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M4.5 9.5a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0Zm6.75-3a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0Zm6.75 3a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0ZM6.75 14.25a2.25 2.25 0 1 1 4.5 0v1.5a1.5 1.5 0 0 1-1.5 1.5h-1.5a1.5 1.5 0 0 1-1.5-1.5v-1.5Zm5.25 0a2.25 2.25 0 1 1 4.5 0v1.5a1.5 1.5 0 0 1-1.5 1.5H13.5a1.5 1.5 0 0 1-1.5-1.5v-1.5Zm5.25 0a2.25 2.25 0 1 1 4.5 0v1.5a1.5 1.5 0 0 1-1.5 1.5H18.75a1.5 1.5 0 0 1-1.5-1.5v-1.5Z"
+            />
+          </svg>
+        </span>
+        <span
+          class="text-lg font-semibold tracking-tight text-slate-900 dark:text-white"
+          >Firulais</span
+        >
+      </a>
+
+      <nav
+        class="hidden items-center gap-6 text-sm font-medium text-firulais-muted md:flex"
+        aria-label="Principal"
+      >
+        <a
+          class="transition hover:text-firulais-primary dark:hover:text-firulais-pets"
+          href="#objetivo"
+          >Objetivo</a
+        >
+        <a
+          class="transition hover:text-firulais-primary dark:hover:text-firulais-pets"
+          href="#quienes-somos"
+          >Quiénes somos</a
+        >
+        <a
+          class="transition hover:text-firulais-primary dark:hover:text-firulais-pets"
+          href="#aportamos"
+          >Qué aportamos</a
+        >
+        <a
+          class="transition hover:text-firulais-primary dark:hover:text-firulais-pets"
+          href="#publicidad"
+          >Publicidad</a
+        >
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <button
+          type="button"
+          (click)="toggleTheme()"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-firulais-separator bg-white text-firulais-close-text shadow-soft transition hover:border-firulais-primary/40 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:hover:border-firulais-pets/50"
+          [attr.aria-label]="darkMode() ? 'Activar modo claro' : 'Activar modo oscuro'"
+        >
+          @if (darkMode()) {
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 3a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1Zm5.657 2.343a1 1 0 0 1 1.414 0l.707.707a1 1 0 0 1-1.414 1.414l-.707-.707a1 1 0 0 1 0-1.414ZM21 11a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2h1Zm-2.929 7.071a1 1 0 0 1 0 1.414l-.707.707a1 1 0 0 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0ZM12 20a1 1 0 0 1-1-1v-1a1 1 0 1 1 2 0v1a1 1 0 0 1-1 1Zm-7.071-2.929a1 1 0 0 1-1.414 0l-.707-.707a1 1 0 1 1 1.414-1.414l.707.707a1 1 0 0 1 0 1.414ZM4 13a1 1 0 1 1 0-2H3a1 1 0 1 1 0 2h1Zm2.343-9.657a1 1 0 0 1 0 1.414L5.636 5.464A1 1 0 1 1 4.222 4.05l.707-.707a1 1 0 0 1 1.414 0ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z"
+            />
+          </svg>
+          } @else {
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M21.752 15.002A9.718 9.718 0 0 1 12.003 21c-5.385 0-9.752-4.367-9.752-9.75 0-4.412 2.961-8.132 7.004-9.29.55-.15 1.12.22 1.12.8 0 .4-.27.74-.65.85a7.474 7.474 0 0 0-5.13 7.14c0 4.14 3.36 7.5 7.5 7.5a7.48 7.48 0 0 0 7.14-5.13c.11-.38.45-.65.85-.65.58 0 .95.57.8 1.12Z"
+            />
+          </svg>
+          }
+        </button>
+        <a
+          href="#publicidad"
+          class="hidden rounded-xl bg-gradient-to-br from-firulais-primary to-firulais-primary-dark px-4 py-2 text-sm font-semibold text-white shadow-card transition hover:brightness-105 sm:inline-flex"
+        >
+          Anunciate
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <section
+      class="relative overflow-hidden bg-firulais-splash dark:bg-gradient-to-b dark:from-firulais-body-dark dark:to-firulais-map-popup"
+      aria-labelledby="hero-heading"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(43,157,238,0.2),transparent_50%)] dark:bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.12),transparent_55%)]"
+      ></div>
+      <div
+        class="relative mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-2 lg:items-center"
+      >
+        <div>
+          <p
+            class="mb-3 inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-firulais-primary-dark shadow-soft dark:bg-slate-800/80 dark:text-firulais-pets"
+          >
+            <span
+              class="rounded-full bg-firulais-badge-bg px-2 py-0.5 text-[10px] font-bold text-firulais-badge-fg"
+              >IA</span
+            >
+            al servicio de las mascotas
+          </p>
+          <h1
+            id="hero-heading"
+            class="text-4xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white sm:text-5xl"
+          >
+            Reencontrá a tu compañero con
+            <span
+              class="bg-gradient-to-r from-firulais-primary to-firulais-primary-dark bg-clip-text text-transparent"
+            >
+              Firulais</span
+            >
+          </h1>
+          <p
+            class="mt-5 max-w-xl text-lg text-firulais-muted dark:text-slate-300"
+          >
+            Una app pensada para acelerar la búsqueda de mascotas perdidas:
+            inteligencia artificial que ayuda a difundir avisos, cruzar datos y
+            guiar a la comunidad cuando más importa.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              href="#objetivo"
+              class="inline-flex items-center justify-center rounded-xl bg-firulais-primary px-5 py-3 text-sm font-semibold text-white shadow-card transition hover:bg-firulais-primary-dark"
+            >
+              Conocé el proyecto
+            </a>
+            <a
+              href="#publicidad"
+              class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-firulais-close-text transition hover:border-firulais-primary/50 dark:border-slate-600 dark:bg-firulais-map-popup dark:text-slate-100 dark:hover:border-firulais-pets/40"
+            >
+              Publicidad con nosotros
+            </a>
+          </div>
+          <p
+            class="mt-6 text-sm text-firulais-schedule dark:text-slate-400"
+          >
+            Próximamente en dispositivos móviles · Comunidad y alertas en tiempo
+            real cuando esté disponible.
+          </p>
+        </div>
+        <div
+          class="relative flex justify-center lg:justify-end"
+          aria-hidden="true"
+        >
+          <div
+            class="relative w-full max-w-md rounded-3xl border border-white/60 bg-firulais-surface p-6 shadow-card dark:border-slate-600 dark:bg-firulais-map-popup"
+          >
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <p class="text-xs font-medium text-firulais-muted">
+                  Vista previa
+                </p>
+                <p class="text-lg font-semibold text-slate-900 dark:text-white">
+                  Aviso activo
+                </p>
+              </div>
+              <span
+                class="rounded-lg bg-firulais-badge-bg px-2.5 py-1 text-xs font-bold text-firulais-badge-fg"
+                >24h</span
+              >
+            </div>
+            <div
+              class="mt-4 rounded-2xl bg-firulais-splash p-4 dark:bg-slate-900/60"
+            >
+              <div class="flex gap-3">
+                <div
+                  class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white text-firulais-pets dark:bg-firulais-bar"
+                >
+                  <svg class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M4.5 9.5a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0Zm6.75-3a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0Zm6.75 3a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0ZM6.75 14.25a2.25 2.25 0 1 1 4.5 0v1.5a1.5 1.5 0 0 1-1.5 1.5h-1.5a1.5 1.5 0 0 1-1.5-1.5v-1.5Zm5.25 0a2.25 2.25 0 1 1 4.5 0v1.5a1.5 1.5 0 0 1-1.5 1.5H13.5a1.5 1.5 0 0 1-1.5-1.5v-1.5Zm5.25 0a2.25 2.25 0 1 1 4.5 0v1.5a1.5 1.5 0 0 1-1.5 1.5H18.75a1.5 1.5 0 0 1-1.5-1.5v-1.5Z"
+                    />
+                  </svg>
+                </div>
+                <div class="min-w-0">
+                  <p class="truncate font-medium text-slate-900 dark:text-white">
+                    Max · zona norte
+                  </p>
+                  <p class="text-sm text-firulais-muted">
+                    IA sugiere coincidencias con avisos cercanos y fotos
+                    similares.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p class="mt-4 text-xs text-firulais-schedule">
+              Horario de atención comunitaria: variable según región
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="objetivo"
+      class="border-t border-firulais-separator bg-firulais-body py-16 dark:border-slate-800 dark:bg-firulais-body-dark sm:py-20"
+    >
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <h2
+          class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white"
+        >
+          Objetivo de la aplicación
+        </h2>
+        <p class="mt-3 max-w-2xl text-firulais-muted dark:text-slate-300">
+          Firulais concentra la angustia de una pérdida en un flujo claro: crear
+          un aviso, compartirlo y dejar que la tecnología ayude a filtrar
+          señales útiles entre el ruido.
+        </p>
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article
+            class="rounded-2xl border border-firulais-separator bg-firulais-surface p-6 shadow-soft dark:border-slate-700 dark:bg-firulais-map-popup"
+          >
+            <div
+              class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-firulais-splash text-firulais-primary-dark dark:bg-slate-800 dark:text-firulais-pets"
+            >
+              <span class="text-xl" aria-hidden="true">◎</span>
+            </div>
+            <h3 class="font-semibold text-slate-900 dark:text-white">
+              Búsqueda asistida por IA
+            </h3>
+            <p class="mt-2 text-sm leading-relaxed text-firulais-muted">
+              Análisis de imágenes y texto para relacionar avisos, reducir
+              duplicados y destacar coincidencias que una persona podría pasar
+              por alto cuando corre el reloj.
+            </p>
+          </article>
+          <article
+            class="rounded-2xl border border-firulais-separator bg-firulais-surface p-6 shadow-soft dark:border-slate-700 dark:bg-firulais-map-popup"
+          >
+            <div
+              class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-firulais-splash text-firulais-primary-dark dark:bg-slate-800 dark:text-firulais-pets"
+            >
+              <span class="text-xl" aria-hidden="true">📍</span>
+            </div>
+            <h3 class="font-semibold text-slate-900 dark:text-white">
+              Alcance local inteligente
+            </h3>
+            <p class="mt-2 text-sm leading-relaxed text-firulais-muted">
+              Mapas y contexto geográfico para que vecinos, refugios y
+              rescatistas vean lo relevante cerca suyo sin perder de vista el
+              caso.
+            </p>
+          </article>
+          <article
+            class="rounded-2xl border border-firulais-separator bg-firulais-surface p-6 shadow-soft sm:col-span-2 lg:col-span-1 dark:border-slate-700 dark:bg-firulais-map-popup"
+          >
+            <div
+              class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-firulais-splash text-firulais-primary-dark dark:bg-slate-800 dark:text-firulais-pets"
+            >
+              <span class="text-xl" aria-hidden="true">🤝</span>
+            </div>
+            <h3 class="font-semibold text-slate-900 dark:text-white">
+              Comunidad conectada
+            </h3>
+            <p class="mt-2 text-sm leading-relaxed text-firulais-muted">
+              La app está pensada para que quien encuentra y quien pierde se
+              encuentren más rápido, con espacio honesto para sponsors del
+              mundo mascotas que financian el servicio.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="quienes-somos"
+      class="bg-firulais-surface py-16 dark:bg-slate-900/40 sm:py-20"
+    >
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div>
+            <h2
+              class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white"
+            >
+              Quiénes somos
+            </h2>
+            <p class="mt-4 text-firulais-muted dark:text-slate-300">
+              Somos un equipo que mezcla sensibilidad por los animales con
+              experiencia en producto digital. Construimos Firulais porque
+              creemos que la tecnología puede traducirse en abrazos reales:
+              cada minuto cuenta cuando una mascota no está en casa.
+            </p>
+            <p class="mt-4 text-firulais-muted dark:text-slate-300">
+              Trabajamos con foco en la región hispanohablante, priorizando
+              claridad, accesibilidad y privacidad en los datos que la gente
+              confía al publicar un aviso.
+            </p>
+          </div>
+          <div
+            class="rounded-3xl border border-firulais-separator bg-white p-8 shadow-soft dark:border-slate-700 dark:bg-firulais-map-popup"
+          >
+            <ul class="space-y-4">
+              <li class="flex gap-3">
+                <span
+                  class="mt-1 h-2 w-2 shrink-0 rounded-full bg-firulais-primary"
+                ></span>
+                <div>
+                  <p class="font-medium text-slate-900 dark:text-white">
+                    Misión
+                  </p>
+                  <p class="text-sm text-firulais-muted">
+                    Reducir el tiempo de separación entre mascotas y familias.
+                  </p>
+                </div>
+              </li>
+              <li class="flex gap-3">
+                <span
+                  class="mt-1 h-2 w-2 shrink-0 rounded-full bg-firulais-pets"
+                ></span>
+                <div>
+                  <p class="font-medium text-slate-900 dark:text-white">
+                    Visión
+                  </p>
+                  <p class="text-sm text-firulais-muted">
+                    Una red útil, humana y sostenible gracias a aliados del
+                    ecosistema pet.
+                  </p>
+                </div>
+              </li>
+              <li class="flex gap-3">
+                <span
+                  class="mt-1 h-2 w-2 shrink-0 rounded-full bg-firulais-primary-dark"
+                ></span>
+                <div>
+                  <p class="font-medium text-slate-900 dark:text-white">
+                    Valores
+                  </p>
+                  <p class="text-sm text-firulais-muted">
+                    Transparencia, empatía y uso responsable de la IA.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="aportamos"
+      class="border-t border-firulais-separator bg-firulais-body py-16 dark:border-slate-800 dark:bg-firulais-body-dark sm:py-20"
+    >
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <h2
+          class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white"
+        >
+          Qué aportamos
+        </h2>
+        <p class="mt-3 max-w-2xl text-firulais-muted dark:text-slate-300">
+          Firulais no reemplaza el cuidado humano: lo potencia. Esto es lo que
+          la app busca aportar a personas, animales y a quienes colaboran en la
+          calle.
+        </p>
+        <div class="mt-10 grid gap-6 md:grid-cols-2">
+          <div
+            class="rounded-2xl bg-gradient-to-br from-firulais-primary to-firulais-primary-dark p-[1px]"
+          >
+            <div
+              class="h-full rounded-2xl bg-white p-6 dark:bg-firulais-body-dark"
+            >
+              <h3 class="font-semibold text-slate-900 dark:text-white">
+                Para quien busca
+              </h3>
+              <ul class="mt-4 space-y-3 text-sm text-firulais-muted">
+                <li class="flex gap-2">
+                  <span class="text-firulais-primary" aria-hidden="true">✓</span>
+                  Plantillas de aviso pensadas para ser claras y completas.
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-firulais-primary" aria-hidden="true">✓</span>
+                  Sugerencias automáticas para mejorar fotos y descripciones.
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-firulais-primary" aria-hidden="true">✓</span>
+                  Canales de difusión y mapa para movilizar a la comunidad.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="rounded-2xl bg-gradient-to-br from-firulais-primary to-firulais-primary-dark p-[1px]"
+          >
+            <div
+              class="h-full rounded-2xl bg-white p-6 dark:bg-firulais-body-dark"
+            >
+              <h3 class="font-semibold text-slate-900 dark:text-white">
+                Para quien ayuda
+              </h3>
+              <ul class="mt-4 space-y-3 text-sm text-firulais-muted">
+                <li class="flex gap-2">
+                  <span class="text-firulais-pets" aria-hidden="true">✓</span>
+                  Alertas y contexto para priorizar casos cercanos.
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-firulais-pets" aria-hidden="true">✓</span>
+                  Menos fricción al reportar un avistamiento o rescate.
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-firulais-pets" aria-hidden="true">✓</span>
+                  Reconocimiento del rol de refugios, veterinarias y vecinos.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="publicidad"
+      class="bg-firulais-surface py-16 dark:bg-slate-900/40 sm:py-24"
+    >
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <h2
+            class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white"
+          >
+            Publicitate con nosotros
+          </h2>
+          <p class="mt-4 text-lg text-firulais-muted dark:text-slate-300">
+            Firulais tendrá espacios de publicidad para financiar
+            infraestructura, moderación y mejora continua de la IA. Si tu
+            negocio vive del mundo mascotas, podés llegar a una audiencia
+            altamente comprometida en el momento en que más importa el cuidado
+            animal.
+          </p>
+        </div>
+
+        <div
+          class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          <div
+            class="rounded-2xl border border-firulais-separator bg-white p-5 shadow-soft transition hover:border-firulais-primary/40 dark:border-slate-700 dark:bg-firulais-map-popup dark:hover:border-firulais-pets/40"
+          >
+            <p class="text-2xl" aria-hidden="true">🎓</p>
+            <h3 class="mt-3 font-semibold text-slate-900 dark:text-white">
+              Adiestradores
+            </h3>
+            <p class="mt-2 text-sm text-firulais-muted">
+              Promocioná clases y programas de educación canina a familias que
+              recién suman un integrante o reforzán vínculos después de un
+              susto.
+            </p>
+          </div>
+          <div
+            class="rounded-2xl border border-firulais-separator bg-white p-5 shadow-soft transition hover:border-firulais-primary/40 dark:border-slate-700 dark:bg-firulais-map-popup dark:hover:border-firulais-pets/40"
+          >
+            <p class="text-2xl" aria-hidden="true">✂️</p>
+            <h3 class="mt-3 font-semibold text-slate-900 dark:text-white">
+              Peluquerías caninas
+            </h3>
+            <p class="mt-2 text-sm text-firulais-muted">
+              Ofrecé turnos, spa y servicios de higiene a quienes valoran el
+              bienestar visible de sus perros y gatos.
+            </p>
+          </div>
+          <div
+            class="rounded-2xl border border-firulais-separator bg-white p-5 shadow-soft transition hover:border-firulais-primary/40 dark:border-slate-700 dark:bg-firulais-map-popup dark:hover:border-firulais-pets/40"
+          >
+            <p class="text-2xl" aria-hidden="true">🩺</p>
+            <h3 class="mt-3 font-semibold text-slate-900 dark:text-white">
+              Veterinarias
+            </h3>
+            <p class="mt-2 text-sm text-firulais-muted">
+              Urgencias, vacunación y chequeos: aparecé cuando los dueños
+              buscan profesionales de confianza cerca.
+            </p>
+          </div>
+          <div
+            class="rounded-2xl border border-firulais-separator bg-white p-5 shadow-soft transition hover:border-firulais-primary/40 dark:border-slate-700 dark:bg-firulais-map-popup dark:hover:border-firulais-pets/40"
+          >
+            <p class="text-2xl" aria-hidden="true">🛒</p>
+            <h3 class="mt-3 font-semibold text-slate-900 dark:text-white">
+              Pet shops
+            </h3>
+            <p class="mt-2 text-sm text-firulais-muted">
+              Alimento, juguetes y accesorios para quienes quieren mimar a sus
+              mascotas o reabastecerse después de una salida a pasear.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="mt-12 flex flex-col items-start justify-between gap-6 rounded-3xl bg-gradient-to-r from-firulais-primary to-firulais-primary-dark p-8 text-white sm:flex-row sm:items-center"
+        >
+          <div>
+            <p class="text-lg font-semibold">¿Querés aparecer en la app?</p>
+            <p class="mt-1 max-w-xl text-sm text-white/90">
+              Escribinos con tu rubro, zona de cobertura y objetivos de
+              campaña. Preparamos paquetes display y futuras ubicaciones
+              nativas sin sacrificar la experiencia de quien ya está pasando un
+              mal momento.
+            </p>
+          </div>
+          <a
+            href="mailto:publicidad@firulais.app?subject=Interés%20en%20publicidad%20Firulais"
+            class="inline-flex shrink-0 items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-firulais-close-text shadow-soft transition hover:bg-firulais-splash"
+          >
+            Contactar
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer
+    class="border-t border-firulais-separator bg-firulais-bar-light py-10 dark:border-slate-800 dark:bg-firulais-bar"
+  >
+    <div
+      class="mx-auto flex max-w-6xl flex-col gap-6 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6"
+    >
+      <div class="flex items-center gap-2">
+        <span
+          class="flex h-9 w-9 items-center justify-center rounded-lg bg-firulais-splash dark:bg-slate-800"
+        >
+          <svg
+            class="h-5 w-5 text-firulais-pets"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M4.5 9.5a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0Zm6.75-3a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0Zm6.75 3a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0ZM6.75 14.25a2.25 2.25 0 1 1 4.5 0v1.5a1.5 1.5 0 0 1-1.5 1.5h-1.5a1.5 1.5 0 0 1-1.5-1.5v-1.5Zm5.25 0a2.25 2.25 0 1 1 4.5 0v1.5a1.5 1.5 0 0 1-1.5 1.5H13.5a1.5 1.5 0 0 1-1.5-1.5v-1.5Zm5.25 0a2.25 2.25 0 1 1 4.5 0v1.5a1.5 1.5 0 0 1-1.5 1.5H18.75a1.5 1.5 0 0 1-1.5-1.5v-1.5Z"
+            />
+          </svg>
+        </span>
+        <div>
+          <p class="font-semibold text-slate-900 dark:text-white">Firulais</p>
+          <p class="text-xs text-firulais-muted dark:text-slate-400">
+            © {{ year }} · Hecho con cuidado para las mascotas
+          </p>
+        </div>
+      </div>
+      <p class="max-w-md text-sm text-firulais-muted dark:text-slate-400">
+        Los colores y textos de esta página siguen la guía visual de la app
+        para que sponsors y usuarios reconozcan la misma identidad en web y en
+        móvil.
+      </p>
+    </div>
+  </footer>
+</div>
