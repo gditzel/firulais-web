@@ -3,52 +3,52 @@
     class="sticky top-0 z-50 border-b border-firulais-separator bg-firulais-bar-light/90 backdrop-blur-md dark:border-slate-700/80 dark:bg-firulais-bar/90"
   >
     <div
-      class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6"
+      class="mx-auto flex min-h-[4.25rem] max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:min-h-[4.75rem] sm:px-6 sm:py-5"
     >
-      <a href="#" class="group flex items-center gap-2">
+      <a href="#" class="group flex items-center gap-3">
         <span
-          class="flex h-11 w-11 items-center justify-center rounded-xl bg-firulais-splash text-firulais-pets dark:bg-firulais-map-popup"
+          class="flex h-12 w-12 items-center justify-center rounded-2xl bg-firulais-splash text-firulais-pets shadow-sm ring-1 ring-firulais-primary/10 dark:bg-firulais-map-popup dark:ring-white/10"
           aria-hidden="true"
         >
-          <app-firulais-paw-logo iconClass="h-7 w-7" />
+          <app-firulais-paw-logo iconClass="h-8 w-8" />
         </span>
         <span
-          class="text-lg font-semibold tracking-tight text-slate-900 dark:text-white"
+          class="text-xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-[1.35rem]"
           >Firulais</span
         >
       </a>
 
       <nav
-        class="hidden items-center gap-6 text-sm font-medium text-firulais-muted md:flex"
+        class="hidden items-center gap-7 text-[0.9375rem] font-medium leading-none text-firulais-muted md:flex"
         aria-label="Principal"
       >
         <a
-          class="transition hover:text-firulais-primary dark:hover:text-firulais-pets"
+          class="rounded-lg px-1 py-2.5 transition hover:text-firulais-primary dark:hover:text-firulais-pets"
           href="#objetivo"
           >Objetivo</a
         >
         <a
-          class="transition hover:text-firulais-primary dark:hover:text-firulais-pets"
+          class="rounded-lg px-1 py-2.5 transition hover:text-firulais-primary dark:hover:text-firulais-pets"
           href="#quienes-somos"
           >Quiénes somos</a
         >
         <a
-          class="transition hover:text-firulais-primary dark:hover:text-firulais-pets"
+          class="rounded-lg px-1 py-2.5 transition hover:text-firulais-primary dark:hover:text-firulais-pets"
           href="#aportamos"
           >Qué aportamos</a
         >
         <a
-          class="transition hover:text-firulais-primary dark:hover:text-firulais-pets"
+          class="rounded-lg px-1 py-2.5 transition hover:text-firulais-primary dark:hover:text-firulais-pets"
           href="#espacio-aliados"
           >Publicidad</a
         >
       </nav>
 
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-2.5 sm:gap-3">
         <button
           type="button"
           (click)="toggleTheme()"
-          class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-firulais-separator bg-white text-firulais-close-text shadow-soft transition hover:border-firulais-primary/40 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:hover:border-firulais-pets/50"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-firulais-separator bg-white text-firulais-close-text shadow-soft transition hover:border-firulais-primary/40 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:hover:border-firulais-pets/50"
           [attr.aria-label]="darkMode() ? 'Activar modo claro' : 'Activar modo oscuro'"
         >
           @if (darkMode()) {
@@ -67,7 +67,7 @@
         </button>
         <a
           href="#espacio-aliados"
-          class="hidden rounded-xl bg-gradient-to-br from-firulais-primary to-firulais-primary-dark px-4 py-2 text-sm font-semibold text-white shadow-card transition hover:brightness-105 sm:inline-flex"
+          class="hidden rounded-xl bg-gradient-to-br from-firulais-primary to-firulais-primary-dark px-5 py-2.5 text-sm font-semibold text-white shadow-card transition hover:brightness-105 sm:inline-flex"
         >
           Anunciate
         </a>
