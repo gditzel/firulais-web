@@ -7,11 +7,12 @@ import {
   signal,
 } from '@angular/core';
 
+import { FirulaisPawLogoComponent } from './shared/firulais-paw-logo.component';
 import { ScrollRevealDirective } from './shared/scroll-reveal.directive';
 
 @Component({
   selector: 'app-root',
-  imports: [ScrollRevealDirective],
+  imports: [ScrollRevealDirective, FirulaisPawLogoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
